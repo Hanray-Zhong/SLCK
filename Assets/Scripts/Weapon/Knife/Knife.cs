@@ -15,7 +15,7 @@ public class Knife : MonoBehaviour
     private void Update() {
         info = anim.GetCurrentAnimatorStateInfo(0);
         if (info.IsName("WeaponHit") && info.normalizedTime > 0.5) {
-            Debug.Log("get");
+            // Debug.Log("get");
             anim.SetBool("Attack", false);
         }
     }

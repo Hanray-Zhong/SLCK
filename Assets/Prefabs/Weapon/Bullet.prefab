@@ -152,4 +152,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeadEffect: {fileID: 1615402597081308, guid: aaeafaebe8639ca4a8c75c743889a7a9, type: 3}
-  Damage: 20
+  Damage: 0

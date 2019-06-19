@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerUnit : MonoBehaviour
 {
     public float Health = 100;
-    public float Weight = 1;
     [Header("Death")]
     public bool IsDead = false;
     public GameObject DeadEffect;
