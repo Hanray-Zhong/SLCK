@@ -27,7 +27,11 @@ public class MoveBetween : MonoBehaviour{
 
 	//Message from agent
 	public void OnDestinationReached(){
-		agent.SetDestination(WPoints[Random.Range(0, WPoints.Count)]);
+		if (gameObject.GetComponent<EnemyAI>().target == null)
+			agent.SetDestination(WPoints[Random.Range(0, WPoints.Count)]);
+		else {
+			agent.SetDestination(gameObject.GetComponent<EnemyAI>().target.transform.position);
+		}
 	}
 	
 

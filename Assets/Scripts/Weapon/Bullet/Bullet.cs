@@ -7,16 +7,20 @@ public class Bullet : MonoBehaviour
     public GameObject DeadEffect;
     public float Damage;
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.tag == "Map" || other.gameObject.tag == "Player") {
-            if (other.gameObject.tag == "Player") {
+        if (other.tag == "Map" || other.tag == "Enemy") {
+            if (other.gameObject.tag == "Enemy") {
                 PlayerUnit u = other.gameObject.GetComponent<PlayerUnit>();
+                EnemyAI ai = other.gameObject.GetComponent<EnemyAI>();
                 if (u != null) {
                     u.Damage(Damage);
+                }
+                if (ai != null) {
+                    ai.beHit = true;
                 }
             }
             Instantiate(DeadEffect, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
-        Destroy(gameObject, 5);
+        Destroy(gameObject, 1.5f);
     }
 }

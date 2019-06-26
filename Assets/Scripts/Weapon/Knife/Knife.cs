@@ -20,7 +20,7 @@ public class Knife : MonoBehaviour
         }
     }
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.tag == "Player") {
+        if (other.gameObject.tag == "Enemy") {
             PlayerUnit u = other.gameObject.GetComponent<PlayerUnit>();
             if (u != null) {
                 u.Damage(Damage);

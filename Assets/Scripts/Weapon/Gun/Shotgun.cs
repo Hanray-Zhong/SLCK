@@ -4,8 +4,8 @@ using UnityEngine;
 
 public static class Shotgun
 {
-    public static int ShootNumPerTime = 3;
+    public static int ShootNumPerTime = 4;
     public static float ShootForce = 10;
-    public static float BulletDamage = 15;
+    public static float BulletDamage = 25;
     public static float ShootCD = 30;
 }

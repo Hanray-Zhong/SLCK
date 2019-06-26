@@ -25,12 +25,8 @@ public class CameraFollow : MonoBehaviour
         var x = transform.position.x;
         var y = transform.position.y;
         if (IsFollowing) {
-            if (Mathf.Abs(x - player.position.x) > Margin.x) {//如果相机与角色的x轴距离超过了最大范围则将x平滑的移动到目标点的x
-                x = Mathf.Lerp(x, player.position.x, smoothing.x * Time.deltaTime);
-            }
-            if (Mathf.Abs (y - player.position.y)> Margin.y) {//如果相机与角色的y轴距离超过了最大范围则将x平滑的移动到目标点的y
-                y = Mathf.Lerp(y, player.position.y, smoothing.y * Time.deltaTime);
-            }
+            x = player.transform.position.x;
+            y = player.transform.position.y;
         }
         float orthographicSize = GetComponent<Camera>().orthographicSize;//orthographicSize代表相机(或者称为游戏视窗)竖直方向一半的范围大小,且不随屏幕分辨率变化(水平方向会变)
         var cameraHalfWidth = orthographicSize * ((float)Screen.width / Screen.height);//的到视窗水平方向一半的大小

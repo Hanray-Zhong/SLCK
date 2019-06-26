@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Map
+  - Enemy
+  - Knife
+  - HealthBag
   layers:
   - Default
   - TransparentFX
@@ -16,8 +19,8 @@ TagManager:
   - 
   - Player
   - Map
-  - 
-  - 
+  - Enemy
+  - HealthBag
   - 
   - 
   - 
